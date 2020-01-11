@@ -1,0 +1,30 @@
+<div class="mt-20" fxLayout="column" fxLayoutAlign="center stretch"  fxLayoutGap="20px">
+
+
+    <div fxFlex fxLayout="row" fxLayoutAlign="center stretch" fxLayoutGap="20px">
+        <mat-form-field class="example-full-width">
+            <input matInput type="number" placeholder="Number 1" [ngModelOptions]="{standalone: true}" [(ngModel)]="n1">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Operation</mat-label>
+            <mat-select [(value)]="opr">
+                <mat-option value="add"> + </mat-option>
+                <mat-option value="sub"> - </mat-option>
+                <mat-option value="mul"> * </mat-option>
+                <mat-option value="div"> / </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput type="number" placeholder="Number 2" [ngModelOptions]="{standalone: true}" [(ngModel)]="n2">
+        </mat-form-field>
+    </div>
+
+    <div fxFlex fxLayout="row" fxLayoutAlign="center stretch" fxLayoutGap="20px">
+        <button mat-raised-button color="primary" (click)="primaryClick()">submit</button>
+        <span fxFlex="30" class="result">
+            result = {{result}}
+        </span>
+    </div>
+</div>

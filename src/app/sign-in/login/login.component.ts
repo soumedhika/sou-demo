@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  selected = 'option2';
+  food = 'Pongadalu';
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  primaryClick() {
+    console.log('food=',this.food);
   }
 
 }

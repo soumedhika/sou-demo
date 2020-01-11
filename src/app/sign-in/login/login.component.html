@@ -1,1 +1,38 @@
 <p>login works!</p>
+
+<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Favorite food" [ngModelOptions]="{standalone: true}" [(ngModel)]="food">
+    </mat-form-field>
+  
+<br/>
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Leave a comment"></textarea>
+    </mat-form-field>
+  
+    <br/>
+
+  <mat-form-field>
+    <mat-label>Select an option</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option>None</mat-option>
+      <mat-option value="option1">Option 1</mat-option>
+      <mat-option value="option2">Option 2</mat-option>
+      <mat-option value="option3">Option 3</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <p>You selected: {{selected}}</p>
+
+  <br/>
+  
+
+</form>
+
+<button mat-raised-button color="primary" (click)="primaryClick()">Primary</button>
+
+<div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px">
+  <div>Krishna</div>
+  <div>Sou</div>
+</div>
