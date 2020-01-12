@@ -1,4 +1,4 @@
-<div class="mt-20" fxLayout="column" fxLayoutAlign="center stretch"  fxLayoutGap="20px">
+<div class="mt-20" fxLayout="column" fxLayoutAlign="center stretch" fxLayoutGap="20px">
 
 
     <div fxFlex fxLayout="row" fxLayoutAlign="center stretch" fxLayoutGap="20px">
@@ -23,8 +23,27 @@
 
     <div fxFlex fxLayout="row" fxLayoutAlign="center stretch" fxLayoutGap="20px">
         <button mat-raised-button color="primary" (click)="primaryClick()">submit</button>
-        <span fxFlex="30" class="result">
+        <span *ngIf="result!=0" fxFlex="30" class="result">
             result = {{result}}
         </span>
     </div>
+
+    <div fxLayout="column" style="max-width: 350px !important" fxLayoutAlign="center center" fxLayoutGap="20px">
+
+        <div fxLayout="column" style="max-width: 350px !important">
+            <div class="calc-bar">{{calcAnswer}}</div>
+
+            <div fxLayout="row wrap" fxLayoutAlign="center center">
+
+                <app-calc-btn fxFlex="25" *ngFor="let btn of buttons" 
+                [calcBtn]="btn"
+                (calcBtnClick)="onCalcBtnClick($event)"
+                >
+                </app-calc-btn>
+
+            </div>
+        </div>
+
+    </div>
+
 </div>

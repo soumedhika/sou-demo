@@ -4,6 +4,7 @@ import { CalcComponent } from './calc/calc.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
+import { CalcBtnComponent } from './calc-btn/calc-btn.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [CalcComponent], 
+  declarations: [CalcComponent, CalcBtnComponent], 
   imports: [
     CommonModule,
     FormsModule,

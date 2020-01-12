@@ -1,0 +1,9 @@
+<div class="btn">
+    <button mat-stroked-button color="primary" (click)="btnClick(calcBtn)" 
+        [ngClass]="{
+            'opp-btn': calcBtn.opp,
+            'eql-btn': calcBtn.opp=='E'
+            }" >
+        {{calcBtn.text}}
+    </button>
+</div>
