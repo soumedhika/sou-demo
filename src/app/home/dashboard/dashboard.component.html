@@ -1,1 +1,9 @@
-<p>dashboard works!</p>
+<div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="20px" style="margin: 30px">
+    <div fxFlex *ngFor="let item of jsonResp" fxLayout="row" fxLayoutAlign="space-evenly start">
+        <span fxFlex="10">{{item.id}}</span>
+        <span fxFlex="30">{{item.name}}</span>
+        <span fxFlex="10">{{item.address.geo.lat}}</span>
+    </div>
+
+
+</div>

@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/signin',
+    redirectTo: '/home',
     pathMatch:'full'
   },
   {
@@ -28,7 +28,7 @@ const routes: Routes = [
   //otherwise redirect to SignIn
   {
     path: '**',
-    redirectTo: '/signin',
+    redirectTo: '/home',
     pathMatch:'full'
   },
 
