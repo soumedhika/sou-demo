@@ -5,5 +5,11 @@
         <span fxFlex="10">{{item.address.geo.lat}}</span>
     </div>
 
+    <div fxFlex *ngFor="let item of postsJson" fxLayout="row" fxLayoutAlign="space-evenly start" fxLayoutGap="15px" class="posts">
+        <span >{{item.userId}}</span>
+        <span>{{item.id}}</span>
+        <span fxFlex="30">{{item.title}}</span>
+        <span fxFlex>{{item.body}}</span>
+    </div>
 
 </div>

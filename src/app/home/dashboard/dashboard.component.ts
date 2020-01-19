@@ -10,6 +10,7 @@ import { UserModal } from '../modals/user.modal';
 export class DashboardComponent implements OnInit {
 
   jsonResp:UserModal[] = [];
+  postsJson:any[] =[];
 
   constructor(
     private _service: HomeService
@@ -18,20 +19,16 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
 
-    const data = this._service.getUserData().subscribe(
-      (data:any) => {
-        console.log('Data=',data);
-        this.jsonResp = data;
-      },
-      (error) => {
-        console.error('Error',error);
-      },
-      () => {
-        console.log('Completed');
-      }
-      
+    this._service.getUsers().subscribe(
+      (data:any) => this.jsonResp = data ,
+      (error) => console.error('Error',error)
     );
-    console.log(data);
+
+    this._service.getPosts().subscribe(
+      (data:any) => this.postsJson = data ,
+      (error) => console.error('Error',error)
+    );
+
   }
 
 }

@@ -11,7 +11,12 @@ export class HomeService {
     private http: HttpClient
   ) { }
 
-  getUserData() {
+  getUsers() {
     return this.http.get(this.url+'/users');
   }
+
+  getPosts() {
+    return this.http.get(this.url+'/posts');
+  }
+
 }
